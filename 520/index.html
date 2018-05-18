@@ -23,11 +23,11 @@
             color: #ebf7f4;
         }
         .body--ready {
-            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+            background: -webkit-linear-gradient(top, rgb(244, 194, 194) 0%, rgb(255, 54, 54) 120%);
+            background: -moz-linear-gradient(top, rgb(244, 194, 194) 0%, rgb(255, 54, 54) 120%);
+            background: -o-linear-gradient(top, rgb(244, 194, 194) 0%, rgb(255, 54, 54) 120%);
+            background: -ms-linear-gradient(top, rgb(244, 194, 194) 0%, rgb(255, 54, 54) 120%);
+            background: linear-gradient(top, rgb(244, 194, 194) 0%, rgb(255, 54, 54) 120%);
         }
         .text {
             position: fixed;
@@ -43,23 +43,39 @@
             width: 128px;
             background-size: cover;
             border-radius: 200px;
-            box-shadow: 0px 0px 40px rgba(63, 81, 181, 0.72);
-            border: 3px solid #00a0ff;
+            box-shadow: 0px 0px 40px rgba(255, 0, 0, 0.6);
+            border: 3px solid #fff;
             opacity: 1;
             margin: 0 auto;
             margin-top: 20px;
             margin-bottom: 20px;
-            transition: all 1.0s;
+            animation:mymove 5s normal;
         }
-        #logo:hover {
-            box-shadow: 0 0 10px #fff;
-            -webkit-box-shadow: 0 0 19px #fff;
+
+        @keyframes mymove
+        {
+            from {transition:  rotate(360deg) 1.0s;}
+            to {
+              transform: rotate(360deg);
+              -ms-transform: rotate(360deg); /* IE 9 */
+              -moz-transform: rotate(360deg); /* Firefox */
+              -webkit-transform: rotate(360deg); /* Safari 和 Chrome */
+              -o-transform: rotate(360deg); /* Opera */
+              filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+            }
+        }
+
+        @-webkit-keyframes mymove /*Safari and Chrome*/
+        {
+          from {transition:  rotate(360deg) 1.0s;}
+          to {
             transform: rotate(360deg);
             -ms-transform: rotate(360deg); /* IE 9 */
             -moz-transform: rotate(360deg); /* Firefox */
             -webkit-transform: rotate(360deg); /* Safari 和 Chrome */
             -o-transform: rotate(360deg); /* Opera */
             filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+          }
         }
         .cs {
             width: 100%;
@@ -92,7 +108,7 @@
     <img src="https://liuchangirl.github.io/img/5.jpg" id="logo">
 </div>
 <canvas class="canvas" width="1820" height="905"></canvas>
-<p class="text" style="color: #ed3073;">
+<p class="text" style="color: #FFF;">
     Nice to Meet You
     <br/>
     <span id="span_dt_dt"></span>
